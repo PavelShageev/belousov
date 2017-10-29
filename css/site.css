@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+html,
+body { height: 100% }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #949494;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  margin: 0;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+img {
+	max-width: 100%;
+    height: auto;
+}
+i {
+	font-style: normal;
+}
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*==============================================
+    Header Area Css
+===============================================*/
+.header-area {
+    padding: 28px 0 28px;
+    position: relative;
+}
+.header-area .logo {
+    margin-top: -15px;
+    margin-bottom: -15px;
+}
+.header-contact-info ul {
+    overflow: hidden;
+    margin: 6px 0;
+}
+.header-contact-info ul li {
+    display: inline-block;
+    float: left;
+    margin-right: 25px;
+    position: relative;
+    border-right: 1px solid #f4f4f4;
+    padding-right: 25px;
+}
+.header-contact-info ul li:last-child{
+    margin-right: 0;
+    border-right: none;
+    padding-right: 0;
+}
+.header-contact-info ul li .iocn-holder{
+    width: 30px;
+}
+.header-contact-info ul li .iocn-holder span::before {
+    color: #00a5ea;
+    display: block;
+    font-size: 35px;
+    line-height: 25px;
+    transition: all 500ms ease;
+}
+.header-contact-info ul li .iocn-holder, 
+.header-contact-info ul li .text-holder{
+  display: table-cell;
+  vertical-align: middle;
+} 
+.header-contact-info ul li .text-holder {
+  padding-left: 15px;
+}
+.header-contact-info ul li .text-holder h5 {
+  color: #00a5ea;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 20px;
+  margin: 0 0 5px;
+}
+.header-contact-info ul li .text-holder h6{
+    color: #949494;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.search-button .toggle-search {
+    overflow: hidden;
+}
+.search-button .toggle-search button {
+    background: #fff;
+    border: 1px solid #f4f4f4;
+    display: block;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    line-height: 48px;
+    border-radius: 3px;
+    margin: 2px 0;
+    transition: all 500ms ease;
+}
+.search-button .toggle-search button i {
+    color: #999999;
+    font-size: 14px;
+}
+.search-button .toggle-search button:hover i{
+    color: #222;
+}
+.search-button .toggle-search button:hover{
+    background: #ffd700;
+    border: 1px solid #ebc601;    
+} 
+
+/*==============================================
+    Mainmenu Area Css
+===============================================*/
+.mainmenu-area {
+  background: #00a5ea;
+}
+.main-menu {
+  float: left;
+  position: relative;
+}
+.main-menu .navbar-collapse {
+  padding: 0px
+}
+.main-menu .navigation {
+  float: left;
+  margin: 0;
+  position: relative;
+}
+.main-menu .navigation li {
+    float: left;
+    padding: 23px 24px;
+    position: relative;
+    margin-left: 2px;
+}
+.main-menu .navigation li:first-child{
+    margin-left: 0;
+    padding-left: 0;
+}
+.main-menu .navigation li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -2px;
+    width: 2px;
+    height: 100%;
+    background: url(../images/menu-border.png) center center no-repeat;
+}
+.main-menu .navigation li:last-child:before {
+    display: none;
+}
+.main-menu .navigation li a {
+    background: #00a5ea;
+    color: #ffffff;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+    opacity: 1;
+    padding: 2px 0px;
+    position: relative;
+    text-transform: uppercase;
+    transition: all 500ms ease;
+    font-family: 'Raleway', sans-serif;
+}
+.main-menu .navigation > li:hover > a, 
+.main-menu .navigation > li.current > a {
+    color: #ffd700;
+    opacity: 1;
+}
+
+.main-menu .navigation li a:after {
+    content: "\f0d7";
+    font-family: FontAwesome;
+    color: #ffd700;
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: -30px;
+    width: 100%;
+    height: 15px;
+    transition: all 300ms ease 300ms;
+    text-align: center;
+    opacity: 0;
+}
+.main-menu .navigation li:hover > a:after,
+.main-menu .navigation li.current > a:after,
+.main-menu .navigation li.current-menu-item > a:after{
+	bottom: -10px;	
+    opacity: 1;
+}
+
+.main-menu .navigation > li > ul {
+    position: absolute;
+    left: 0px;
+    top: 140%;
+    width: 265px;
+    background: #fff;
+    padding: 15px 15px;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 500ms ease;
+}
+.main-menu .navigation > li:hover > ul {
+  top: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+.main-menu .navigation > li > ul > li {
+    float: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    display: block;
+}
+.main-menu .navigation > li > ul li::before{
+    display: none;
+}
+.main-menu .navigation li ul li a {
+    background: #fff;
+    color: #1c1c1c;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 11px 0px 10px 15px;
+    position: relative;
+    text-transform: capitalize;
+    transition: all 500ms ease 0s;
+}
+.main-menu .navigation li ul li a:after{
+    display: none;
+}
+.main-menu .navigation > li > ul > li:hover > a {
+  color: #fff;
+  background-color: #00a5ea;
+}
+
+.main-menu .navbar-collapse > ul li.dropdown .dropdown-btn {
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  width: 34px;
+  height: 30px;
+  border: 1px solid #ffffff;
+  background: url(../images/submenu-icon.png) center center no-repeat;
+  background-size: 20px;
+  cursor: pointer;
+  z-index: 5;
+  display: none;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+
+.mainmenu-area .appoinment-button a {
+    float: right;
+    background: #ffd700;
+    width: 230px;
+    display: block;
+    text-align: center;
+    line-height: 70px;
+    color: #1c1c1c;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 500ms ease;
+}
+.mainmenu-area .appoinment-button a:hover{
+    background: #e4c000;
+  
+}
