@@ -295,3 +295,64 @@ li {
     background: #e4c000;
   
 }
+
+/*==============================================
+    Content Area Css
+===============================================*/
+.title {
+    text-align: center;
+    margin: 30px 10px 20px 10px;
+}
+
+.inverse {
+    background: #00a5ea;
+    color: white;
+}
+
+.bottom15 {
+    padding-bottom: 15px;
+}
+
+.pic {
+    width: 40%;
+    margin-right: 20px;
+}
+
+.left {
+    float:left;
+}
+
+.right {
+    float: right;
+}
+
+@media screen and (max-width: 768px){
+    .pic{
+        display: none;
+    }
+}
+
+section.services li::before {
+    content: "\2022";
+    color: #00a5ea; 
+    font-weight: bold;
+    display: inline-block;
+    width: 1em; 
+    margin-left: -1em; 
+}
+
+section.services ul {
+    margin-left: 40px;
+}
+
+@media screen and (min-width: 1200px) {
+    p,li {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+
+    h3 {
+        font-size: 30px;
+    }
+}
