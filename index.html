@@ -83,10 +83,10 @@
                         </ul>
                     </div>
                 </nav>
-                <!--End mainmenu
+                <!--End mainmenu-->
                 <div class="appoinment-button">
-                    <a href="#">Make an Appoinment</a>
-                </div>-->
+                    <a href="contact.php">Service Request</a>
+                </div>
             </div>
         </div>
     </div>
@@ -171,7 +171,13 @@
                 <h3><span class="fa fa-phone-square"></span> <a href="tel:04-17-788-564">0417 788 564</a></h3>
             </div>
             <div class="col-sm-6 bottom15">
-                <h3><span class="fa fa-envelope-square"></span> <a href="mailto:allrefau@gmail.com">allrefau@gmail.com</a></h3>
+                <h3><span class="fa fa-envelope-square"></span> 
+                    <a class="crypted"
+                        data-dom = "gmail"
+                        data-com = "com"
+                        data-nam = "allrefau"
+                        onclick="window.location.href = 'mailto:' + this.dataset.nam + '@' + this.dataset.dom + '.' + this.dataset.com; return false;"
+                    > </a></h3>
             </div>
         </div>
     </div>
@@ -184,6 +190,7 @@
   src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" >
 </script>
 <script>
+
 jQuery(document).ready(function($) {
   function scrollToSection(event) {
     event.preventDefault();
@@ -194,6 +201,7 @@ jQuery(document).ready(function($) {
   }
   $('[data-scroll]').on('click', scrollToSection);
 }(jQuery));
+
 </script>
 </body>
 </html>

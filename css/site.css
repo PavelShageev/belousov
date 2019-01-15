@@ -299,6 +299,10 @@ li {
 /*==============================================
     Content Area Css
 ===============================================*/
+.crypted:after {
+    content: attr(data-nam) "@" attr(data-dom) "." attr(data-com); 
+  }
+
 .title {
     text-align: center;
     margin: 30px 10px 20px 10px;
@@ -355,4 +359,13 @@ section.services ul {
     h3 {
         font-size: 30px;
     }
+}
+
+/*==============================================
+    Contact Form CSS
+===============================================*/
+
+.btn-primary {
+    background-color: #00a5ea;
+    border-color: #00a5ea;
 }
